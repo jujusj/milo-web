@@ -1,7 +1,7 @@
 window.MILO_SITE_CONFIG = {
   siteName: "Milo",
   tagline: "Apprendre autrement, pour de vrai.",
-  canonicalBaseUrl: "https://milo-web.vercel.app",
+  canonicalBaseUrl: "https://milo-1k6f9fa0z-milo-web-s-projects.vercel.app",
   targetAgeRange: "5 à 11 ans",
   releaseStatus: "preparation",
   contactEmail: "[À compléter avant publication]",
