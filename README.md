@@ -43,21 +43,16 @@ Les informations modifiables sont centralisées dans `content.js` :
 ## Assets utilisés
 
 - `assets/logo/milo-logo.png` : logo recadré depuis l'écran de chargement fourni.
-- `assets/screenshots/milo-app-home.png`
-- `assets/screenshots/milo-app-lessons.png`
-- `assets/screenshots/milo-app-exercises.png`
-- `assets/screenshots/milo-app-onboarding-reward.png`
-- `assets/screenshots/milo-app-games.png`
-- `assets/screenshots/milo-app-profile-avatars.png`
-- `assets/screenshots/milo-parent-dashboard-tools-accessibility.png`
-- `assets/screenshots/milo-screen-time-settings.png`
-- `assets/screenshots/milo-access-management.png`
-- `assets/screenshots/milo-security-privacy.png`
+- `assets/photos/child-tablet-home-hero.jpg`
+- `assets/photos/child-tablet-classroom.jpg`
+- `assets/photos/child-tablet-parent-home.jpg`
+- `assets/photos/child-tablet-specialist.jpg`
 
 ## Assets manquants à ajouter plus tard
 
 - Logo officiel détouré si disponible.
 - Mascotte Milo isolée en PNG/WebP/SVG officiel, sans recadrage ni déformation.
+- Photos finales validées par le projet si une banque d'images ou un shooting réel est retenu.
 - Image Open Graph dédiée au format 1200 x 630.
 - Vraies URL App Store et Google Play si l'application est publiée.
 
@@ -83,7 +78,7 @@ Le site s'appuie sur les principes du RGAA et des WCAG, mais aucune conformité 
 
 ## Sobriété numérique
 
-La version actuelle n'utilise pas de framework, pas de bibliothèque UI, pas de tracker marketing, pas de police externe et pas de vidéo. Les images sont les captures fournies, renommées proprement et utilisées avec dimensions explicites.
+La version actuelle n'utilise pas de framework, pas de bibliothèque UI, pas de tracker marketing, pas de police externe et pas de vidéo. Les images sont optimisées en JPG, utilisées avec dimensions explicites et montrent des situations d'usage plutôt que des écrans d'application.
 
 ## Pages
 
