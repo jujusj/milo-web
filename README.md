@@ -10,6 +10,16 @@ npm run dev
 
 Le site est ensuite disponible sur `http://localhost:4173`.
 
+## Déploiement Vercel
+
+`vercel.json` force Vercel à traiter le projet comme un site statique servi depuis la racine du dépôt :
+
+- `framework: null`
+- `buildCommand: null`
+- `outputDirectory: "."`
+
+Cela évite qu'une commande de build cherche un dossier de sortie inexistant.
+
 ## Vérifier
 
 ```bash
