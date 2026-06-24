@@ -1,0 +1,17 @@
+{
+  "name": "Milo",
+  "short_name": "Milo",
+  "description": "Application éducative inclusive pour accompagner les enfants dyslexiques.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#FFFBEA",
+  "theme_color": "#FFAC00",
+  "icons": [
+    {
+      "src": "/assets/logo/milo-logo.png",
+      "sizes": "154x86",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

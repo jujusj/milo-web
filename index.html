@@ -1,10 +1,538 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Milo</title>
-</head>
-<body style="background-color: black;">
-    <h1 style="color: pink;">Milo</h1>
-</body>
+<!doctype html>
+<html lang="fr" data-page-path="/">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Milo — Application éducative inclusive pour les enfants dyslexiques</title>
+    <meta name="description" content="Milo accompagne les enfants dyslexiques avec des exercices courts, des consignes audio et visuelles et un suivi adapté aux familles et aux professionnels.">
+    <meta name="theme-color" content="#FFFBEA">
+    <meta property="og:title" content="Milo — Apprendre autrement, pour de vrai.">
+    <meta property="og:description" content="Une application éducative inclusive pour accompagner les enfants dyslexiques à la maison, à l'école ou en séance.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/screenshots/milo-app-onboarding-reward.png">
+    <meta property="og:url" content="https://milo-web.vercel.app/">
+    <link rel="canonical" href="https://milo-web.vercel.app/">
+    <link rel="icon" href="/assets/logo/milo-logo.png" type="image/png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/content.js" defer></script>
+    <script src="/script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Milo",
+        "description": "Application éducative inclusive pour les enfants dyslexiques.",
+        "url": "https://milo-web.vercel.app/"
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Milo remplace-t-il un orthophoniste ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Non. Milo est un outil complémentaire conçu pour soutenir les apprentissages entre les séances, à la maison ou à l'école."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "L'enfant peut-il utiliser Milo seul ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Certaines activités peuvent être réalisées en autonomie, mais l'accompagnement d'un adulte reste recommandé selon l'âge et les besoins de l'enfant."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Comment le temps d'écran est-il encadré ?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Les accompagnants peuvent définir des limites d'utilisation et proposer des sessions courtes, des pauses ou des activités hors écran."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Accueil Milo">
+          <img src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+          <span>Pour les enfants dyslexiques</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+          <a href="#pourquoi">Pourquoi Milo</a>
+          <a href="#fonctionnalites">Fonctionnalités</a>
+          <a href="#pour-qui">Pour qui ?</a>
+          <a href="#accessibilite">Accessibilité</a>
+          <a class="nav-cta" href="#telecharger">Télécharger</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="section hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="section-kicker">Application éducative inclusive</p>
+            <h1>Apprendre autrement, pour de vrai.</h1>
+            <p class="lead">Milo accompagne les enfants dyslexiques dans leurs apprentissages avec des activités courtes, progressives et accessibles, utilisables à la maison, à l'école ou en séance.</p>
+            <p>Un environnement pensé pour comprendre, avancer à son rythme et reprendre confiance. Le périmètre actuel s'adresse aux enfants de <span data-age-range>5 à 11 ans</span>.</p>
+            <div class="hero-actions" aria-label="Actions principales">
+              <a class="button button-primary" href="#pourquoi">Découvrir Milo</a>
+              <a class="button button-secondary" href="#interfaces">Voir l'application</a>
+              <a class="button button-blue" href="#telecharger">Être informé·e</a>
+            </div>
+          </div>
+          <div class="visual-stack" aria-label="Aperçu de l'application Milo">
+            <span class="decorative-shape shape-yellow" aria-hidden="true"></span>
+            <span class="decorative-shape shape-pink" aria-hidden="true"></span>
+            <span class="decorative-shape shape-star" aria-hidden="true">✦</span>
+            <div class="app-mockup hero-mockup">
+              <img src="/assets/screenshots/milo-app-home.png" width="422" height="704" alt="Écran d'accueil de Milo montrant le parcours de progression de Zoé avec plusieurs leçons disponibles" fetchpriority="high">
+            </div>
+            <aside class="reward-card" aria-label="Aperçu de récompense">
+              <img src="/assets/screenshots/milo-app-onboarding-reward.png" width="454" height="366" alt="Écran de félicitations Milo avec la mascotte orange qui encourage l'enfant">
+              <p>Des encouragements sans classement ni comparaison.</p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="pourquoi">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Pourquoi Milo</p>
+            <h2>Quand apprendre devient épuisant, l'outil doit s'adapter à l'enfant.</h2>
+            <p class="lead">Les consignes longues, les interfaces trop chargées et la peur de se tromper peuvent transformer un exercice simple en véritable source de fatigue. Milo propose un environnement plus calme, plus lisible et plus respectueux du rythme de chaque enfant.</p>
+          </div>
+          <div class="feature-grid">
+            <article class="feature-card card-blue">
+              <span class="icon-badge icon-blue" aria-hidden="true">A</span>
+              <h3>Comprendre sans surcharge</h3>
+              <p>Des consignes courtes, audio et visuelles, avec un seul objectif clairement identifiable à l'écran.</p>
+            </article>
+            <article class="feature-card card-green">
+              <span class="icon-badge icon-green" aria-hidden="true">✓</span>
+              <h3>Avancer à son rythme</h3>
+              <p>Des exercices courts et progressifs qui tiennent compte des réussites, des difficultés et de la fatigue.</p>
+            </article>
+            <article class="feature-card card-pink">
+              <span class="icon-badge icon-pink" aria-hidden="true">★</span>
+              <h3>Reprendre confiance</h3>
+              <p>Des encouragements bienveillants, sans classement, sans comparaison et sans punition.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="fonctionnalites">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Principes fondamentaux</p>
+            <h2>Une application pensée autour des besoins réels de l'enfant</h2>
+          </div>
+          <div class="principles-grid">
+            <article class="principle-card">
+              <span class="icon-badge icon-blue" aria-hidden="true">♪</span>
+              <h3>Consignes audio et visuelles</h3>
+              <p>Chaque consigne peut être lue, écoutée et accompagnée d'un repère visuel.</p>
+            </article>
+            <article class="principle-card">
+              <span class="icon-badge" aria-hidden="true">12</span>
+              <h3>Exercices courts</h3>
+              <p>Les activités sont conçues pour maintenir l'attention sans prolonger inutilement le temps d'écran.</p>
+            </article>
+            <article class="principle-card">
+              <span class="icon-badge icon-green" aria-hidden="true">↗</span>
+              <h3>Progression personnalisée</h3>
+              <p>Le niveau et les recommandations peuvent évoluer selon les besoins de l'enfant.</p>
+            </article>
+            <article class="principle-card">
+              <span class="icon-badge icon-pink" aria-hidden="true">♡</span>
+              <h3>Feedbacks bienveillants</h3>
+              <p>L'erreur devient une étape normale de l'apprentissage, jamais une sanction.</p>
+            </article>
+            <article class="principle-card">
+              <span class="icon-badge icon-green" aria-hidden="true">∞</span>
+              <h3>Continuité de l'accompagnement</h3>
+              <p>Les parents, enseignants et orthophonistes peuvent suivre les mêmes objectifs avec des accès adaptés.</p>
+            </article>
+            <article class="principle-card">
+              <span class="icon-badge icon-blue" aria-hidden="true">⏱</span>
+              <h3>Temps d'écran encadré</h3>
+              <p>Les adultes peuvent définir des limites et encourager des pauses ou des activités hors écran.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="interfaces">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Interfaces réelles</p>
+            <h2>Découvrez Milo en situation</h2>
+            <p class="lead">Les captures ci-dessous reprennent l'interface iPad fournie : parcours enfant, leçons, jeux, profil, dashboard et réglages accompagnants.</p>
+          </div>
+          <div class="interface-grid">
+            <figure class="screenshot-card">
+              <img src="/assets/screenshots/milo-app-lessons.png" width="1176" height="1182" alt="Vue des écrans de leçons Milo avec parcours, fiche de leçon et lancement audio" loading="lazy" decoding="async">
+              <figcaption>
+                <h3>Un parcours visuel, sans pression</h3>
+                <p>Les étapes montrent à l'enfant où il en est, avec des leçons audio, des textes lisibles et des repères stables.</p>
+              </figcaption>
+            </figure>
+            <div class="interface-side">
+              <figure class="screenshot-card">
+                <img src="/assets/screenshots/milo-app-exercises.png" width="1520" height="522" alt="Série d'exercices Milo montrant des consignes courtes, validation et récompense" loading="lazy" decoding="async">
+                <figcaption>
+                  <h3>Des exercices courts</h3>
+                  <p>Chaque activité se concentre sur une consigne unique et des zones d'interaction clairement identifiables.</p>
+                </figcaption>
+              </figure>
+              <figure class="screenshot-card">
+                <img src="/assets/screenshots/milo-parent-dashboard-tools-accessibility.png" width="900" height="780" alt="Écrans accompagnants montrant dashboard, fiches outils, paramètres d'accessibilité et confidentialité" loading="lazy" decoding="async">
+                <figcaption>
+                  <h3>Un suivi lisible pour les adultes</h3>
+                  <p>Les données sont transformées en informations simples : progression, objectifs, fiches outils et réglages utiles.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="apprentissages">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Apprentissages</p>
+            <h2>Des activités structurées pour progresser étape par étape</h2>
+            <p class="lead">Les catégories visibles dans les maquettes sont centralisées dans le fichier de contenu pour évoluer sans modifier la structure du site.</p>
+          </div>
+          <div class="learning-grid" id="learning-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="pour-qui">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Un espace pour chacun</p>
+            <h2>L'enfant apprend, les adultes l'accompagnent</h2>
+          </div>
+          <div class="tabs">
+            <div role="tablist" aria-label="Publics accompagnés par Milo">
+              <button id="tab-enfant" role="tab" type="button" aria-selected="true" aria-controls="panel-enfant">Enfant</button>
+              <button id="tab-parent" role="tab" type="button" aria-selected="false" aria-controls="panel-parent" tabindex="-1">Parent</button>
+              <button id="tab-enseignant" role="tab" type="button" aria-selected="false" aria-controls="panel-enseignant" tabindex="-1">Enseignant</button>
+              <button id="tab-ortho" role="tab" type="button" aria-selected="false" aria-controls="panel-ortho" tabindex="-1">Orthophoniste</button>
+            </div>
+            <section class="audience-panel" id="panel-enfant" role="tabpanel" aria-labelledby="tab-enfant">
+              <div>
+                <h3>Une expérience simple, rassurante et motivante</h3>
+                <ul class="check-list">
+                  <li>Leçons et jeux courts</li>
+                  <li>Audio, progression visuelle et récompenses</li>
+                  <li>Personnalisation de l'avatar</li>
+                  <li>Absence de classement et de comparaison</li>
+                </ul>
+              </div>
+              <div class="panel-image">
+                <img src="/assets/screenshots/milo-app-games.png" width="250" height="664" alt="Page Jeux de Milo avec recommandations et thématiques d'activités" loading="lazy" decoding="async">
+              </div>
+            </section>
+            <section class="audience-panel" id="panel-parent" role="tabpanel" aria-labelledby="tab-parent" hidden>
+              <div>
+                <h3>Comprendre les progrès sans jargon</h3>
+                <ul class="check-list">
+                  <li>Temps d'utilisation et progression par compétence</li>
+                  <li>Objectifs de la semaine et conseils</li>
+                  <li>Fiches outils, réglages d'accessibilité et sécurité</li>
+                  <li>Gestion des accès autorisés</li>
+                </ul>
+              </div>
+              <div class="panel-image">
+                <img src="/assets/screenshots/milo-parent-dashboard-tools-accessibility.png" width="900" height="780" alt="Dashboard parent avec statistiques, objectifs, fiches outils et réglages" loading="lazy" decoding="async">
+              </div>
+            </section>
+            <section class="audience-panel" id="panel-enseignant" role="tabpanel" aria-labelledby="tab-enseignant" hidden>
+              <div>
+                <h3>Différencier sans alourdir la préparation</h3>
+                <ul class="check-list">
+                  <li>Sélection d'exercices et suivi des compétences</li>
+                  <li>Attribution de contenus selon les besoins</li>
+                  <li>Accès limité aux données autorisées</li>
+                  <li>Continuité avec la famille</li>
+                </ul>
+              </div>
+              <div class="panel-image">
+                <img src="/assets/screenshots/milo-access-management.png" width="412" height="342" alt="Écrans de gestion des accès accompagnants pour inviter ou valider un adulte" loading="lazy" decoding="async">
+              </div>
+            </section>
+            <section class="audience-panel" id="panel-ortho" role="tabpanel" aria-labelledby="tab-ortho" hidden>
+              <div>
+                <h3>Prolonger le travail entre les séances</h3>
+                <ul class="check-list">
+                  <li>Exercices ciblés et suivi des objectifs</li>
+                  <li>Résultats autorisés par la famille</li>
+                  <li>Recommandations et continuité cabinet-domicile</li>
+                  <li>Supports utilisables en séance ou à distance</li>
+                </ul>
+              </div>
+              <div class="panel-image">
+                <img src="/assets/screenshots/milo-app-profile-avatars.png" width="864" height="636" alt="Profil enfant Milo avec fiche technique, préférences, leçons favorites et avatars" loading="lazy" decoding="async">
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="accessibilite">
+        <div class="container">
+          <div class="access-grid">
+            <div>
+              <p class="section-kicker">Accessibilité</p>
+              <h2>Accessible dès la conception, pas ajouté à la fin</h2>
+              <p class="lead">Milo a été pensé pour réduire les obstacles liés à la lecture, à la concentration et à la fatigue cognitive. Les réglages restent accessibles aux adultes sans compliquer l'expérience de l'enfant.</p>
+              <ul class="tag-list" aria-label="Engagements d'accessibilité">
+                <li>Consignes audio</li>
+                <li>Textes simplifiés</li>
+                <li>Typographie lisible</li>
+                <li>Taille ajustable</li>
+                <li>Espacement réglable</li>
+                <li>Contraste renforcé</li>
+                <li>Mouvement réduit</li>
+                <li>Grands boutons tactiles</li>
+                <li>Temps paramétrable</li>
+                <li>Alternatives textuelles</li>
+              </ul>
+              <div class="button-row">
+                <a class="button button-secondary" href="/accessibilite/">Lire l'engagement accessibilité</a>
+              </div>
+            </div>
+            <aside class="preference-panel" aria-labelledby="pref-title">
+              <h3 id="pref-title">Tester les préférences d'affichage</h3>
+              <form id="display-preferences">
+                <fieldset>
+                  <legend>Taille du texte</legend>
+                  <div class="radio-row">
+                    <label><input type="radio" name="size" value="normal" checked><span>Normale</span></label>
+                    <label><input type="radio" name="size" value="large"><span>Grande</span></label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Espacement</legend>
+                  <div class="radio-row">
+                    <label><input type="radio" name="spacing" value="normal" checked><span>Normal</span></label>
+                    <label><input type="radio" name="spacing" value="spacious"><span>Renforcé</span></label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Contraste</legend>
+                  <div class="radio-row">
+                    <label><input type="radio" name="contrast" value="standard" checked><span>Standard</span></label>
+                    <label><input type="radio" name="contrast" value="high"><span>Élevé</span></label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Police</legend>
+                  <div class="radio-row">
+                    <label><input type="radio" name="font" value="main" checked><span>Principale</span></label>
+                    <label><input type="radio" name="font" value="accessible"><span>Alternative</span></label>
+                  </div>
+                </fieldset>
+              </form>
+              <div class="demo-text" id="preference-demo">
+                <p><strong>Bonjour Zoé.</strong></p>
+                <p>Aujourd'hui, nous allons écouter des syllabes ensemble. Tu peux avancer à ton rythme.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="confidentialite">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Sécurité et confidentialité</p>
+            <h2>Les données de l'enfant ne sont pas une monnaie d'échange</h2>
+            <p class="lead">Milo est conçu pour respecter la vie privée des mineurs et les principes du RGPD. Les modalités définitives devront être validées juridiquement avant la mise en production.</p>
+          </div>
+          <div class="security-grid">
+            <article class="security-card">
+              <h3>Données limitées</h3>
+              <p>Seules les informations nécessaires au fonctionnement et au suivi pédagogique sont collectées.</p>
+            </article>
+            <article class="security-card">
+              <h3>Accès contrôlés</h3>
+              <p>Chaque accompagnant accède uniquement aux informations qui lui ont été autorisées.</p>
+            </article>
+            <article class="security-card">
+              <h3>Aucune publicité ciblée</h3>
+              <p>Milo n'utilise pas les données des enfants à des fins publicitaires.</p>
+            </article>
+            <article class="security-card">
+              <h3>Consentement et transparence</h3>
+              <p>Les responsables légaux gardent le contrôle sur les comptes, les accès et les données partagées.</p>
+            </article>
+          </div>
+          <div class="button-row">
+            <a class="button button-secondary" href="/confidentialite/">Lire la politique de confidentialité</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="origine">
+        <div class="container">
+          <div class="origin-box">
+            <p class="section-kicker">Origine du projet</p>
+            <h2>Un projet né d'une expérience réelle</h2>
+            <p>Milo est né d'un constat simple : trop d'enfants comprennent, réfléchissent et apprennent autrement, mais continuent d'utiliser des outils qui ne sont pas adaptés à leur fonctionnement. Le projet transforme une expérience personnelle de la dyslexie en une démarche de recherche, de design et de transmission.</p>
+            <p><strong>L'objectif n'est pas de rendre l'enfant conforme à l'outil, mais de créer un outil capable de s'adapter à l'enfant.</strong></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-soft" id="telecharger">
+        <div class="container download-grid">
+          <div>
+            <p class="section-kicker">Téléchargement</p>
+            <h2>Prêt à apprendre autrement ?</h2>
+            <p class="lead">Retrouvez Milo sur tablette et accompagnez chaque apprentissage dans un environnement plus calme, plus lisible et plus encourageant.</p>
+            <p class="release-badge" data-release-status>Milo arrive bientôt</p>
+            <div class="store-row" id="store-buttons" aria-label="Boutons de téléchargement">
+              <span class="button button-disabled" aria-disabled="true">App Store bientôt disponible</span>
+              <span class="button button-disabled" aria-disabled="true">Google Play bientôt disponible</span>
+            </div>
+            <p class="muted">Compatibilité : <span data-compatibility>Tablette en priorité</span>. Version : <span data-site-version>[À compléter avant publication]</span>.</p>
+          </div>
+          <aside class="download-panel">
+            <h3>Milo arrive bientôt</h3>
+            <p>Recevez une information lorsque l'application sera prête. Un seul champ est obligatoire.</p>
+            <form class="form" id="launch-form" novalidate>
+              <p class="form-summary" id="form-summary" tabindex="-1"></p>
+              <div class="honeypot" aria-hidden="true" hidden>
+                <label for="website">Site web</label>
+                <input id="website" name="website" tabindex="-1" autocomplete="off">
+              </div>
+              <div class="form-field">
+                <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
+                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error">
+                <p class="muted" id="email-help">Utilisée uniquement pour vous informer du lancement.</p>
+                <p class="field-error" id="email-error"></p>
+              </div>
+              <div class="form-field">
+                <label for="profile">Vous êtes</label>
+                <select id="profile" name="profile">
+                  <option value="">Je préfère ne pas préciser</option>
+                  <option value="parent">Parent ou famille</option>
+                  <option value="enseignant">Enseignant ou AESH</option>
+                  <option value="orthophoniste">Orthophoniste ou professionnel</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <label class="checkbox-field" for="consent">
+                <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
+                <span>J'accepte de recevoir une information liée au lancement de Milo et j'ai lu la <a href="/confidentialite/">politique de confidentialité</a>.</span>
+              </label>
+              <p class="field-error" id="consent-error"></p>
+              <button class="button button-primary" type="submit">Être informé·e du lancement</button>
+              <p class="muted" id="form-live" aria-live="polite"></p>
+            </form>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="faq">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-kicker">Questions fréquentes</p>
+            <h2>Des réponses simples, sans promesse excessive</h2>
+          </div>
+          <div class="faq-list">
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-1">
+                <span>Milo remplace-t-il un orthophoniste ?</span>
+                <span data-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" id="faq-1" hidden>
+                <p>Non. Milo est un outil complémentaire conçu pour soutenir les apprentissages entre les séances, à la maison ou à l'école.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-2">
+                <span>L'enfant peut-il utiliser Milo seul ?</span>
+                <span data-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" id="faq-2" hidden>
+                <p>Certaines activités peuvent être réalisées en autonomie, mais l'accompagnement d'un adulte reste recommandé selon l'âge et les besoins de l'enfant.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-3">
+                <span>Comment le temps d'écran est-il encadré ?</span>
+                <span data-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" id="faq-3" hidden>
+                <p>Les accompagnants peuvent définir des limites d'utilisation et proposer des sessions courtes, des pauses ou des activités hors écran.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-4">
+                <span>Les enseignants et les orthophonistes voient-ils toutes les données ?</span>
+                <span data-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" id="faq-4" hidden>
+                <p>Non. Les accès sont contrôlés et chaque accompagnant voit uniquement les informations qui lui ont été autorisées.</p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button" aria-expanded="false" aria-controls="faq-5">
+                <span>Milo est-il disponible sur téléphone ?</span>
+                <span data-accordion-icon aria-hidden="true">+</span>
+              </button>
+              <div class="faq-answer" id="faq-5" hidden>
+                <p>L'expérience principale est pensée pour la tablette. Certaines fonctions peuvent être adaptées au téléphone selon la version finale du produit.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img class="footer-logo" src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+            <p>Apprendre autrement, pour de vrai.</p>
+            <p class="muted" data-release-status>Milo arrive bientôt</p>
+          </div>
+          <nav class="footer-links" aria-label="Navigation secondaire">
+            <a href="/#pourquoi">Pourquoi Milo</a>
+            <a href="/#fonctionnalites">Fonctionnalités</a>
+            <a href="/#pour-qui">Pour qui ?</a>
+            <a href="/#telecharger">Télécharger</a>
+          </nav>
+          <nav class="footer-links" aria-label="Informations légales">
+            <a href="/accessibilite/">Accessibilité</a>
+            <a href="/confidentialite/">Confidentialité</a>
+            <a href="/mentions-legales/">Mentions légales</a>
+            <a href="/mentions-legales/#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-current-year>2026</span> Milo. Tous droits réservés.</span>
+          <span>Site sans tracker marketing ni bannière cookies inutile.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

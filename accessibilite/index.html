@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr" data-page-path="/accessibilite/">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accessibilité — Milo</title>
+    <meta name="description" content="Engagements d'accessibilité de Milo, application éducative inclusive pour accompagner les enfants dyslexiques.">
+    <meta property="og:title" content="Accessibilité — Milo">
+    <meta property="og:description" content="Milo est conçu en s'appuyant sur les principes du RGAA et des WCAG, sans déclaration officielle non auditée.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/screenshots/milo-parent-dashboard-tools-accessibility.png">
+    <meta property="og:url" content="https://milo-web.vercel.app/accessibilite/">
+    <link rel="canonical" href="https://milo-web.vercel.app/accessibilite/">
+    <link rel="icon" href="/assets/logo/milo-logo.png" type="image/png">
+    <link rel="stylesheet" href="/styles.css">
+    <script src="/content.js" defer></script>
+    <script src="/script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="/" aria-label="Accueil Milo">
+          <img src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+          <span>Accessibilité intégrée</span>
+        </a>
+        <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+        <nav class="site-nav" id="site-nav" aria-label="Navigation principale">
+          <a href="/#pourquoi">Pourquoi Milo</a>
+          <a href="/#fonctionnalites">Fonctionnalités</a>
+          <a href="/#pour-qui">Pour qui ?</a>
+          <a href="/accessibilite/" aria-current="page">Accessibilité</a>
+          <a class="nav-cta" href="/#telecharger">Télécharger</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="contenu">
+      <section class="page-hero">
+        <div class="container">
+          <p class="section-kicker">Engagement accessibilité</p>
+          <h1>Une expérience pensée pour réduire les obstacles, pas pour les déplacer.</h1>
+          <p class="lead">Le site et l'application Milo sont conçus en s'appuyant sur les principes du RGAA et des WCAG. Un audit complet devra être réalisé avant toute déclaration officielle de conformité.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container legal-grid">
+          <article class="legal-card">
+            <h2>Principes appliqués</h2>
+            <p>Milo cherche à limiter la surcharge cognitive : textes courts, hiérarchie claire, repères visuels stables, contenus non dépendants uniquement de la couleur et interactions prévisibles.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Fonctionnalités disponibles</h2>
+            <p>Consignes audio, taille de texte ajustable, espacement renforcé, contraste élevé, grands boutons tactiles, réglages de temps d'écran et alternatives textuelles aux contenus graphiques.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Compatibilité clavier</h2>
+            <p>La navigation du site, le menu mobile, les onglets, les accordéons et le formulaire sont utilisables au clavier, avec un ordre de tabulation logique et un focus visible.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Lecteurs d'écran</h2>
+            <p>Les pages utilisent des landmarks, une structure de titres hiérarchisée, des libellés visibles, des descriptions d'erreurs associées aux champs et des textes alternatifs pertinents.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Mouvement réduit</h2>
+            <p>Les animations restent limitées. Lorsque le système demande une réduction du mouvement, les transitions décoratives sont supprimées.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Contrastes</h2>
+            <p>Les combinaisons de couleurs privilégient un texte foncé sur les fonds clairs et colorés. Les états de focus restent visibles et ne reposent pas uniquement sur la couleur.</p>
+          </article>
+          <article class="legal-card">
+            <h2>Alternatives textuelles</h2>
+            <p>Les captures importantes sont accompagnées de textes HTML. Les éléments purement décoratifs sont ignorés par les technologies d'assistance.</p>
+          </article>
+          <article class="legal-card" id="contact">
+            <h2>Signaler un problème</h2>
+            <p>Pour signaler un obstacle d'accessibilité, utilisez le contact projet : <strong data-contact-email>[À compléter avant publication]</strong>.</p>
+            <p class="muted">Cette adresse est centralisée dans <code>content.js</code>.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img class="footer-logo" src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+            <p>Apprendre autrement, pour de vrai.</p>
+          </div>
+          <nav class="footer-links" aria-label="Navigation secondaire">
+            <a href="/#pourquoi">Pourquoi Milo</a>
+            <a href="/#fonctionnalites">Fonctionnalités</a>
+            <a href="/#pour-qui">Pour qui ?</a>
+            <a href="/#telecharger">Télécharger</a>
+          </nav>
+          <nav class="footer-links" aria-label="Informations légales">
+            <a href="/accessibilite/" aria-current="page">Accessibilité</a>
+            <a href="/confidentialite/">Confidentialité</a>
+            <a href="/mentions-legales/">Mentions légales</a>
+            <a href="/mentions-legales/#contact">Contact</a>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <span>© <span data-current-year>2026</span> Milo. Tous droits réservés.</span>
+          <span>Accessibilité native, sans surcouche automatique.</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

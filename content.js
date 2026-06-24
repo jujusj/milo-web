@@ -1,0 +1,40 @@
+window.MILO_SITE_CONFIG = {
+  siteName: "Milo",
+  tagline: "Apprendre autrement, pour de vrai.",
+  canonicalBaseUrl: "https://milo-web.vercel.app",
+  targetAgeRange: "5 à 11 ans",
+  releaseStatus: "preparation",
+  contactEmail: "[À compléter avant publication]",
+  appStoreUrl: "",
+  playStoreUrl: "",
+  version: "[À compléter avant publication]",
+  compatibility: "Tablette en priorité, autres supports selon la version finale",
+  legalOwner: "[À compléter avant publication]",
+  learningCategories: [
+    {
+      title: "Lettres et sons",
+      text: "Reconnaître les lettres et associer progressivement les sons.",
+      accent: "orange"
+    },
+    {
+      title: "Phonologie",
+      text: "Écouter, distinguer et manipuler les sons de la langue.",
+      accent: "green"
+    },
+    {
+      title: "Lecture et décodage",
+      text: "Apprendre à transformer les lettres et les syllabes en mots.",
+      accent: "blue"
+    },
+    {
+      title: "Lecture et encodage",
+      text: "Construire et compléter des mots à partir des sons entendus.",
+      accent: "pink"
+    },
+    {
+      title: "Les mots",
+      text: "Enrichir le vocabulaire et faciliter la reconnaissance des mots.",
+      accent: "orange"
+    }
+  ]
+};
