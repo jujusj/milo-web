@@ -287,10 +287,23 @@ li {
   box-shadow: 0 10px 22px rgba(45, 188, 132, 0.24);
 }
 
+.button-pink {
+  background: var(--color-pink);
+  color: #fff;
+  box-shadow: 0 10px 22px rgba(226, 100, 192, 0.24);
+}
+
 .button-blue {
   background: var(--color-blue);
   color: #fff;
   box-shadow: 0 10px 22px rgba(12, 85, 202, 0.22);
+}
+
+.button-yellow {
+  background: var(--color-orange);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(23, 23, 23, 0.28);
+  box-shadow: 0 10px 22px rgba(255, 172, 0, 0.26);
 }
 
 .button-secondary {
