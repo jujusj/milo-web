@@ -43,8 +43,9 @@ Les informations modifiables sont centralisées dans `content.js` :
 
 ## Assets utilisés
 
-- `assets/logo/milo-logo-transparent.png` : logo officiel détouré depuis la direction artistique fournie.
-- `assets/mascot/milo-mascot.png` : mascotte Milo détourée depuis la direction artistique fournie.
+- `assets/logo/milo-logo-text.png` : logo texte seul, sans mascotte.
+- `assets/mascot/milo-tablette.png` : mascotte Milo fournie, utilisée dans le hero.
+- `assets/mascot/milo-content.png` : mascotte Milo fournie, utilisée dans la section téléchargement.
 - `assets/icons/icon-*.svg` : pictogrammes de style app, avec les couleurs de la DA.
 - `assets/photos/child-tablet-home-hero.jpg`
 - `assets/photos/child-tablet-classroom.jpg`
