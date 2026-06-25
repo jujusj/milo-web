@@ -45,13 +45,21 @@
     }
 
     const storeArea = $("#store-buttons");
-    if (storeArea && config.releaseStatus === "available" && (config.appStoreUrl || config.playStoreUrl)) {
+    if (storeArea && config.releaseStatus === "available") {
       storeArea.innerHTML = "";
+      if (config.downloadUrl) {
+        storeArea.insertAdjacentHTML("beforeend", `<a class="button button-yellow" href="${escapeAttr(config.downloadUrl)}" target="_blank" rel="noopener noreferrer">Télécharger Milo</a>`);
+        return;
+      }
       if (config.appStoreUrl) {
-        storeArea.insertAdjacentHTML("beforeend", `<a class="button button-blue" href="${escapeAttr(config.appStoreUrl)}">App Store</a>`);
+        storeArea.insertAdjacentHTML("beforeend", `<a class="button button-yellow" href="${escapeAttr(config.appStoreUrl)}" target="_blank" rel="noopener noreferrer">App Store</a>`);
       }
       if (config.playStoreUrl) {
-        storeArea.insertAdjacentHTML("beforeend", `<a class="button button-blue" href="${escapeAttr(config.playStoreUrl)}">Google Play</a>`);
+        storeArea.insertAdjacentHTML("beforeend", `<a class="button button-blue" href="${escapeAttr(config.playStoreUrl)}" target="_blank" rel="noopener noreferrer">Google Play</a>`);
+      }
+      if (!config.appStoreUrl && !config.playStoreUrl) {
+        storeArea.insertAdjacentHTML("beforeend", '<span class="button button-disabled" aria-disabled="true">App Store</span>');
+        storeArea.insertAdjacentHTML("beforeend", '<span class="button button-disabled" aria-disabled="true">Google Play</span>');
       }
     }
   }
@@ -145,7 +153,6 @@
       demo.classList.toggle("large", data.get("size") === "large");
       demo.classList.toggle("spacious", data.get("spacing") === "spacious");
       demo.classList.toggle("contrast", data.get("contrast") === "high");
-      demo.classList.toggle("alt-font", data.get("font") === "accessible");
       localStorage.setItem(storageKey, JSON.stringify(Object.fromEntries(data.entries())));
     }
 

@@ -35,14 +35,17 @@ Ces scripts utilisent `scripts/check-site.js` et ne nécessitent aucune dépenda
 Les informations modifiables sont centralisées dans `content.js` :
 
 - `targetAgeRange` : âge cible actuellement affiché comme `5 à 11 ans`.
-- `releaseStatus` : utiliser `preparation` tant que l'app n'est pas publiée, ou `available` quand les liens stores sont prêts.
+- `releaseStatus` : utiliser `available` quand l'app est publiée, ou `preparation` si elle repasse en pré-lancement.
+- `downloadUrl` : URL directe prioritaire si un seul lien de téléchargement doit être affiché.
 - `appStoreUrl` et `playStoreUrl` : renseigner uniquement de vraies URL.
 - `contactEmail`, `legalOwner`, `version`, `compatibility` : champs à compléter avant publication.
 - `learningCategories` : catégories d'apprentissage affichées sur la landing page.
 
 ## Assets utilisés
 
-- `assets/logo/milo-logo.png` : logo recadré depuis l'écran de chargement fourni.
+- `assets/logo/milo-logo-transparent.png` : logo officiel détouré depuis la direction artistique fournie.
+- `assets/mascot/milo-mascot.png` : mascotte Milo détourée depuis la direction artistique fournie.
+- `assets/icons/icon-*.svg` : pictogrammes de style app, avec les couleurs de la DA.
 - `assets/photos/child-tablet-home-hero.jpg`
 - `assets/photos/child-tablet-classroom.jpg`
 - `assets/photos/child-tablet-parent-home.jpg`
@@ -50,15 +53,13 @@ Les informations modifiables sont centralisées dans `content.js` :
 
 ## Assets manquants à ajouter plus tard
 
-- Logo officiel détouré si disponible.
-- Mascotte Milo isolée en PNG/WebP/SVG officiel, sans recadrage ni déformation.
 - Photos finales validées par le projet si une banque d'images ou un shooting réel est retenu.
 - Image Open Graph dédiée au format 1200 x 630.
-- Vraies URL App Store et Google Play si l'application est publiée.
+- Vraies URL App Store et Google Play, ou URL directe unique, pour activer les boutons de téléchargement.
 
-## Formulaire
+## Téléchargement
 
-Le formulaire de préinscription effectue une validation côté client et appelle `api/preinscription.js` pour la validation côté serveur sur Vercel. L'API ne stocke pas encore les adresses : connecter l'outil d'emailing ou la base retenue avant lancement.
+La section téléchargement est en état `available`. Elle n'affiche pas de faux boutons actifs : renseigner `downloadUrl`, `appStoreUrl` ou `playStoreUrl` dans `content.js` pour activer le téléchargement direct.
 
 ## Accessibilité
 
@@ -70,7 +71,7 @@ Le site intègre :
 - menu mobile accessible ;
 - onglets ARIA avec navigation aux flèches ;
 - accordéons avec `aria-expanded` ;
-- labels visibles et erreurs associées aux champs ;
+- labels visibles pour les préférences d'affichage ;
 - respect de `prefers-reduced-motion` ;
 - module de préférences d'affichage sauvegardé en `localStorage`.
 
@@ -78,7 +79,7 @@ Le site s'appuie sur les principes du RGAA et des WCAG, mais aucune conformité 
 
 ## Sobriété numérique
 
-La version actuelle n'utilise pas de framework, pas de bibliothèque UI, pas de tracker marketing, pas de police externe et pas de vidéo. Les images sont optimisées en JPG, utilisées avec dimensions explicites et montrent des situations d'usage plutôt que des écrans d'application.
+La version actuelle n'utilise pas de framework, pas de bibliothèque UI, pas de tracker marketing et pas de vidéo. La police Poppins est chargée via Google Fonts pour respecter la direction artistique. Les images sont utilisées avec dimensions explicites et montrent des situations d'usage plutôt que des écrans d'application.
 
 ## Pages
 

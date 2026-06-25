@@ -8,8 +8,8 @@
   "theme_color": "#FFAC00",
   "icons": [
     {
-      "src": "/assets/logo/milo-logo.png",
-      "sizes": "154x86",
+      "src": "/assets/logo/milo-logo-transparent.png",
+      "sizes": "1500x700",
       "type": "image/png",
       "purpose": "any"
     }

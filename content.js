@@ -3,12 +3,13 @@ window.MILO_SITE_CONFIG = {
   tagline: "Apprendre autrement, pour de vrai.",
   canonicalBaseUrl: "https://milo-1k6f9fa0z-milo-web-s-projects.vercel.app",
   targetAgeRange: "5 à 11 ans",
-  releaseStatus: "preparation",
+  releaseStatus: "available",
   contactEmail: "[À compléter avant publication]",
+  downloadUrl: "",
   appStoreUrl: "",
   playStoreUrl: "",
-  version: "[À compléter avant publication]",
-  compatibility: "Tablette en priorité, autres supports selon la version finale",
+  version: "1.0",
+  compatibility: "iPad et tablette en priorité",
   legalOwner: "[À compléter avant publication]",
   learningCategories: [
     {

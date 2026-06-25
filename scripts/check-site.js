@@ -50,7 +50,8 @@ const index = read("index.html");
   'role="tabpanel"',
   'aria-expanded',
   'aria-controls',
-  'id="launch-form"',
+  'id="store-buttons"',
+  'data-release-status',
   'id="display-preferences"'
 ].forEach((needle) => {
   if (!index.includes(needle)) errors.push(`index.html: marqueur accessibilité manquant: ${needle}`);

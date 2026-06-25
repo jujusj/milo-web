@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
 :root {
   --color-pink: #e264c0;
   --color-red: #f54750;
@@ -31,10 +33,11 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   color: var(--color-text);
   background-color: var(--color-background);
-  font-family: Lexend, "Atkinson Hyperlegible", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: Poppins, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 18px;
   line-height: 1.65;
   text-rendering: optimizeLegibility;
@@ -113,8 +116,9 @@ select {
 }
 
 .brand img {
-  width: 104px;
-  border-radius: 12px;
+  width: 114px;
+  height: auto;
+  object-fit: contain;
 }
 
 .brand span {
@@ -145,7 +149,7 @@ select {
   padding: 9px 14px;
   color: var(--color-muted);
   font-size: 0.92rem;
-  font-weight: 750;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -156,9 +160,10 @@ select {
 }
 
 .site-nav .nav-cta {
-  background: var(--color-green);
-  color: var(--color-text);
-  box-shadow: 0 8px 18px rgba(45, 188, 132, 0.22);
+  background: var(--color-orange);
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(23, 23, 23, 0.26);
+  box-shadow: 0 8px 18px rgba(255, 172, 0, 0.26);
 }
 
 .container {
@@ -168,8 +173,89 @@ select {
 
 .section {
   position: relative;
+  z-index: 1;
   padding: 112px 0;
   overflow: hidden;
+}
+
+.site-header,
+main,
+.site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+.milo-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.bg-blob,
+.bg-doodle {
+  position: absolute;
+  opacity: 0.28;
+}
+
+.bg-blob {
+  filter: blur(0.2px);
+}
+
+.bg-blob-yellow {
+  right: -110px;
+  top: 760px;
+  width: 360px;
+  height: 250px;
+  border-radius: 42% 58% 48% 52% / 54% 38% 62% 46%;
+  background: var(--color-orange-soft);
+}
+
+.bg-blob-blue {
+  left: -130px;
+  top: 1120px;
+  width: 290px;
+  height: 230px;
+  border-radius: 58% 42% 60% 40% / 42% 54% 46% 58%;
+  background: var(--color-blue-soft);
+}
+
+.bg-blob-pink {
+  right: 12vw;
+  bottom: -90px;
+  width: 420px;
+  height: 220px;
+  border-radius: 62% 38% 52% 48% / 50% 44% 56% 50%;
+  background: var(--color-red-soft);
+}
+
+.bg-doodle-squiggle {
+  left: 7vw;
+  top: 560px;
+  width: 92px;
+  height: 42px;
+  border-top: 10px solid var(--color-orange);
+  border-radius: 50%;
+  transform: rotate(-12deg);
+}
+
+.bg-doodle-star {
+  right: 8vw;
+  top: 430px;
+  color: var(--color-pink);
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.bg-doodle-arc {
+  left: 14vw;
+  bottom: 170px;
+  width: 44px;
+  height: 26px;
+  border: 9px solid var(--color-red);
+  border-bottom: 0;
+  border-radius: 999px 999px 0 0;
 }
 
 .section-soft {
@@ -188,7 +274,7 @@ select {
   margin: 0 0 12px;
   color: var(--color-blue);
   font-size: 0.84rem;
-  font-weight: 850;
+  font-weight: 800;
   letter-spacing: 0;
 }
 
@@ -271,7 +357,7 @@ li {
   border-radius: 999px;
   padding: 12px 20px;
   color: var(--color-text);
-  font-weight: 850;
+  font-weight: 800;
   line-height: 1.1;
   text-decoration: none;
   transition: background 180ms ease, box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
@@ -327,6 +413,21 @@ li {
 .visual-stack {
   position: relative;
   min-height: 520px;
+}
+
+.mascot-sticker {
+  position: absolute;
+  z-index: 2;
+  width: clamp(104px, 14vw, 170px);
+  height: auto;
+  pointer-events: none;
+}
+
+.hero-mascot {
+  left: 10px;
+  top: 30px;
+  transform: rotate(-7deg);
+  filter: drop-shadow(0 14px 18px rgba(23, 23, 23, 0.14));
 }
 
 .photo-card {
@@ -467,23 +568,27 @@ li {
   width: 54px;
   height: 54px;
   margin-bottom: 16px;
-  border-radius: 18px;
-  background: var(--color-orange-soft);
-  color: var(--color-text);
-  font-size: 1.5rem;
-  font-weight: 900;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 0 8px 18px rgba(23, 23, 23, 0.08);
+}
+
+.icon-badge img {
+  display: block;
+  width: 54px;
+  height: 54px;
 }
 
 .icon-blue {
-  background: var(--color-blue-soft);
+  background: transparent;
 }
 
 .icon-green {
-  background: var(--color-green-soft);
+  background: transparent;
 }
 
 .icon-pink {
-  background: var(--color-pink-soft);
+  background: transparent;
 }
 
 .interface-grid {
@@ -576,7 +681,7 @@ li {
   background: #fff;
   color: var(--color-text);
   text-align: left;
-  font-weight: 850;
+  font-weight: 800;
   cursor: pointer;
 }
 
@@ -657,7 +762,7 @@ li {
   border-radius: 999px;
   background: #fff;
   padding: 8px 12px;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .preference-panel {
@@ -673,7 +778,7 @@ li {
 .preference-panel legend,
 .form-field label,
 .checkbox-field {
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .radio-row {
@@ -722,17 +827,13 @@ li {
 
 .demo-text.spacious {
   line-height: 1.95;
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
 }
 
 .demo-text.contrast {
   border-color: #000;
   background: #fff;
   color: #000;
-}
-
-.demo-text.alt-font {
-  font-family: "Atkinson Hyperlegible", Verdana, Arial, sans-serif;
 }
 
 .security-grid {
@@ -756,7 +857,25 @@ li {
 }
 
 .download-panel {
+  position: relative;
+  overflow: hidden;
   padding: 30px;
+}
+
+.app-download-panel {
+  min-height: 360px;
+  padding-top: 150px;
+  background:
+    radial-gradient(circle at 88% 12%, rgba(255, 172, 0, 0.18), transparent 28%),
+    #fff;
+}
+
+.download-mascot {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  width: 148px;
+  height: auto;
 }
 
 .release-badge {
@@ -766,13 +885,17 @@ li {
   background: var(--color-orange-soft);
   padding: 7px 12px;
   font-size: 0.9rem;
-  font-weight: 850;
+  font-weight: 800;
 }
 
 .store-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+}
+
+.store-row .button-disabled {
+  background: #fff;
 }
 
 .form {
@@ -805,7 +928,7 @@ li {
 .form-summary {
   color: #a51620;
   font-size: 0.95rem;
-  font-weight: 750;
+  font-weight: 700;
 }
 
 .form-summary:empty,
@@ -881,13 +1004,13 @@ li {
 }
 
 .site-footer {
-  background: #171717;
-  color: #fff;
+  background: var(--color-warm);
+  color: var(--color-text);
   padding: 64px 0 34px;
 }
 
 .site-footer .muted {
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--color-muted);
 }
 
 .footer-grid {
@@ -897,8 +1020,8 @@ li {
 }
 
 .footer-logo {
-  width: 118px;
-  border-radius: 14px;
+  width: 160px;
+  height: auto;
 }
 
 .footer-links {
@@ -907,7 +1030,7 @@ li {
 }
 
 .footer-links a {
-  color: #fff;
+  color: var(--color-text);
   text-decoration-thickness: 2px;
   text-underline-offset: 4px;
 }
@@ -918,9 +1041,9 @@ li {
   justify-content: space-between;
   gap: 16px;
   margin-top: 44px;
-  border-top: 1px solid rgba(255, 255, 255, 0.22);
+  border-top: 1px solid var(--color-border);
   padding-top: 24px;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--color-muted);
 }
 
 .sr-only {
@@ -1088,6 +1211,16 @@ li {
     position: static;
     width: 100%;
     margin-top: 18px;
+  }
+
+  .hero-mascot {
+    left: 2px;
+    top: 10px;
+    width: 104px;
+  }
+
+  .app-download-panel {
+    padding-top: 138px;
   }
 
   .photo-card {

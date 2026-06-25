@@ -12,7 +12,7 @@
     <meta property="og:image" content="/assets/photos/child-tablet-home-hero.jpg">
     <meta property="og:url" content="https://milo-1k6f9fa0z-milo-web-s-projects.vercel.app/">
     <link rel="canonical" href="https://milo-1k6f9fa0z-milo-web-s-projects.vercel.app/">
-    <link rel="icon" href="/assets/logo/milo-logo.png" type="image/png">
+    <link rel="icon" href="/assets/logo/milo-logo-transparent.png" type="image/png">
     <link rel="manifest" href="/site.webmanifest">
     <link rel="stylesheet" href="/styles.css">
     <script src="/content.js" defer></script>
@@ -61,10 +61,18 @@
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>
+    <div class="milo-background" aria-hidden="true">
+      <span class="bg-blob bg-blob-yellow"></span>
+      <span class="bg-blob bg-blob-blue"></span>
+      <span class="bg-blob bg-blob-pink"></span>
+      <span class="bg-doodle bg-doodle-squiggle"></span>
+      <span class="bg-doodle bg-doodle-star">✦</span>
+      <span class="bg-doodle bg-doodle-arc"></span>
+    </div>
     <header class="site-header">
       <div class="header-inner">
         <a class="brand" href="/" aria-label="Accueil Milo">
-          <img src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+          <img src="/assets/logo/milo-logo-transparent.png" width="1500" height="700" alt="Milo">
           <span>Pour les enfants dyslexiques</span>
         </a>
         <button class="nav-toggle" id="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -73,7 +81,7 @@
           <a href="#fonctionnalites">Fonctionnalités</a>
           <a href="#pour-qui">Pour qui ?</a>
           <a href="#accessibilite">Accessibilité</a>
-          <a class="nav-cta" href="#telecharger">Télécharger</a>
+          <a class="nav-cta" href="#telecharger">Télécharger Milo</a>
         </nav>
       </div>
     </header>
@@ -89,13 +97,14 @@
             <div class="hero-actions" aria-label="Actions principales">
               <a class="button button-pink" href="#pourquoi">Découvrir Milo</a>
               <a class="button button-blue" href="#interfaces">Voir les usages</a>
-              <a class="button button-yellow" href="#telecharger">Être informé·e</a>
+              <a class="button button-yellow" href="#telecharger">Télécharger l'app</a>
             </div>
           </div>
           <div class="visual-stack" aria-label="Enfant utilisant une tablette avec Milo">
             <span class="decorative-shape shape-yellow" aria-hidden="true"></span>
             <span class="decorative-shape shape-pink" aria-hidden="true"></span>
             <span class="decorative-shape shape-star" aria-hidden="true">✦</span>
+            <img class="mascot-sticker hero-mascot" src="/assets/mascot/milo-mascot.png" width="430" height="400" alt="" aria-hidden="true">
             <div class="photo-card hero-photo">
               <img src="/assets/photos/child-tablet-home-hero.jpg" width="1500" height="938" alt="Enfant assis à un bureau, concentré et détendu, utilisant une tablette pour apprendre" fetchpriority="high">
             </div>
@@ -115,17 +124,17 @@
           </div>
           <div class="feature-grid">
             <article class="feature-card card-blue">
-              <span class="icon-badge icon-blue" aria-hidden="true">A</span>
+              <span class="icon-badge icon-blue" aria-hidden="true"><img src="/assets/icons/icon-audio.svg" width="54" height="54" alt=""></span>
               <h3>Comprendre sans surcharge</h3>
               <p>Des consignes courtes, audio et visuelles, avec un seul objectif clairement identifiable à l'écran.</p>
             </article>
             <article class="feature-card card-green">
-              <span class="icon-badge icon-green" aria-hidden="true">✓</span>
+              <span class="icon-badge icon-green" aria-hidden="true"><img src="/assets/icons/icon-progress.svg" width="54" height="54" alt=""></span>
               <h3>Avancer à son rythme</h3>
               <p>Des exercices courts et progressifs qui tiennent compte des réussites, des difficultés et de la fatigue.</p>
             </article>
             <article class="feature-card card-pink">
-              <span class="icon-badge icon-pink" aria-hidden="true">★</span>
+              <span class="icon-badge icon-pink" aria-hidden="true"><img src="/assets/icons/icon-reward.svg" width="54" height="54" alt=""></span>
               <h3>Reprendre confiance</h3>
               <p>Des encouragements bienveillants, sans classement, sans comparaison et sans punition.</p>
             </article>
@@ -141,32 +150,32 @@
           </div>
           <div class="principles-grid">
             <article class="principle-card">
-              <span class="icon-badge icon-blue" aria-hidden="true">♪</span>
+              <span class="icon-badge icon-blue" aria-hidden="true"><img src="/assets/icons/icon-audio.svg" width="54" height="54" alt=""></span>
               <h3>Consignes audio et visuelles</h3>
               <p>Chaque consigne peut être lue, écoutée et accompagnée d'un repère visuel.</p>
             </article>
             <article class="principle-card">
-              <span class="icon-badge" aria-hidden="true">12</span>
+              <span class="icon-badge" aria-hidden="true"><img src="/assets/icons/icon-lesson.svg" width="54" height="54" alt=""></span>
               <h3>Exercices courts</h3>
               <p>Les activités sont conçues pour maintenir l'attention sans prolonger inutilement le temps d'écran.</p>
             </article>
             <article class="principle-card">
-              <span class="icon-badge icon-green" aria-hidden="true">↗</span>
+              <span class="icon-badge icon-green" aria-hidden="true"><img src="/assets/icons/icon-progress.svg" width="54" height="54" alt=""></span>
               <h3>Progression personnalisée</h3>
               <p>Le niveau et les recommandations peuvent évoluer selon les besoins de l'enfant.</p>
             </article>
             <article class="principle-card">
-              <span class="icon-badge icon-pink" aria-hidden="true">♡</span>
+              <span class="icon-badge icon-pink" aria-hidden="true"><img src="/assets/icons/icon-heart.svg" width="54" height="54" alt=""></span>
               <h3>Feedbacks bienveillants</h3>
               <p>L'erreur devient une étape normale de l'apprentissage, jamais une sanction.</p>
             </article>
             <article class="principle-card">
-              <span class="icon-badge icon-green" aria-hidden="true">∞</span>
+              <span class="icon-badge icon-green" aria-hidden="true"><img src="/assets/icons/icon-game.svg" width="54" height="54" alt=""></span>
               <h3>Continuité de l'accompagnement</h3>
               <p>Les parents, enseignants et orthophonistes peuvent suivre les mêmes objectifs avec des accès adaptés.</p>
             </article>
             <article class="principle-card">
-              <span class="icon-badge icon-blue" aria-hidden="true">⏱</span>
+              <span class="icon-badge icon-blue" aria-hidden="true"><img src="/assets/icons/icon-timer.svg" width="54" height="54" alt=""></span>
               <h3>Temps d'écran encadré</h3>
               <p>Les adultes peuvent définir des limites et encourager des pauses ou des activités hors écran.</p>
             </article>
@@ -340,13 +349,6 @@
                     <label><input type="radio" name="contrast" value="high"><span>Élevé</span></label>
                   </div>
                 </fieldset>
-                <fieldset>
-                  <legend>Police</legend>
-                  <div class="radio-row">
-                    <label><input type="radio" name="font" value="main" checked><span>Principale</span></label>
-                    <label><input type="radio" name="font" value="accessible"><span>Alternative</span></label>
-                  </div>
-                </fieldset>
               </form>
               <div class="demo-text" id="preference-demo">
                 <p><strong>Bonjour Zoé.</strong></p>
@@ -405,46 +407,22 @@
             <p class="section-kicker">Téléchargement</p>
             <h2>Prêt à apprendre autrement ?</h2>
             <p class="lead">Retrouvez Milo sur tablette et accompagnez chaque apprentissage dans un environnement plus calme, plus lisible et plus encourageant.</p>
-            <p class="release-badge" data-release-status>Milo arrive bientôt</p>
+            <p class="release-badge" data-release-status>Application disponible</p>
             <div class="store-row" id="store-buttons" aria-label="Boutons de téléchargement">
-              <span class="button button-disabled" aria-disabled="true">App Store bientôt disponible</span>
-              <span class="button button-disabled" aria-disabled="true">Google Play bientôt disponible</span>
+              <span class="button button-disabled" aria-disabled="true">App Store</span>
+              <span class="button button-disabled" aria-disabled="true">Google Play</span>
             </div>
             <p class="muted">Compatibilité : <span data-compatibility>Tablette en priorité</span>. Version : <span data-site-version>[À compléter avant publication]</span>.</p>
           </div>
-          <aside class="download-panel">
-            <h3>Milo arrive bientôt</h3>
-            <p>Recevez une information lorsque l'application sera prête. Un seul champ est obligatoire.</p>
-            <form class="form" id="launch-form" novalidate>
-              <p class="form-summary" id="form-summary" tabindex="-1"></p>
-              <div class="honeypot" aria-hidden="true" hidden>
-                <label for="website">Site web</label>
-                <input id="website" name="website" tabindex="-1" autocomplete="off">
-              </div>
-              <div class="form-field">
-                <label for="email">Adresse e-mail <span aria-hidden="true">*</span></label>
-                <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-help email-error">
-                <p class="muted" id="email-help">Utilisée uniquement pour vous informer du lancement.</p>
-                <p class="field-error" id="email-error"></p>
-              </div>
-              <div class="form-field">
-                <label for="profile">Vous êtes</label>
-                <select id="profile" name="profile">
-                  <option value="">Je préfère ne pas préciser</option>
-                  <option value="parent">Parent ou famille</option>
-                  <option value="enseignant">Enseignant ou AESH</option>
-                  <option value="orthophoniste">Orthophoniste ou professionnel</option>
-                  <option value="autre">Autre</option>
-                </select>
-              </div>
-              <label class="checkbox-field" for="consent">
-                <input id="consent" name="consent" type="checkbox" required aria-describedby="consent-error">
-                <span>J'accepte de recevoir une information liée au lancement de Milo et j'ai lu la <a href="/confidentialite/">politique de confidentialité</a>.</span>
-              </label>
-              <p class="field-error" id="consent-error"></p>
-              <button class="button button-primary" type="submit">Être informé·e du lancement</button>
-              <p class="muted" id="form-live" aria-live="polite"></p>
-            </form>
+          <aside class="download-panel app-download-panel">
+            <img class="download-mascot" src="/assets/mascot/milo-mascot.png" width="430" height="400" alt="" aria-hidden="true">
+            <h3>Télécharger Milo</h3>
+            <p>L'app est prête à rejoindre la tablette de l'enfant. Le téléchargement direct se fait depuis les liens officiels App Store ou Google Play, sans formulaire ni préinscription.</p>
+            <ul class="check-list">
+              <li>Parcours enfant sur tablette</li>
+              <li>Activités courtes et guidées</li>
+              <li>Espaces parent, école et professionnel</li>
+            </ul>
           </aside>
         </div>
       </section>
@@ -510,9 +488,9 @@
       <div class="container">
         <div class="footer-grid">
           <div>
-            <img class="footer-logo" src="/assets/logo/milo-logo.png" width="154" height="86" alt="Milo">
+            <img class="footer-logo" src="/assets/logo/milo-logo-transparent.png" width="1500" height="700" alt="Milo">
             <p>Apprendre autrement, pour de vrai.</p>
-            <p class="muted" data-release-status>Milo arrive bientôt</p>
+            <p class="muted" data-release-status>Application disponible</p>
           </div>
           <nav class="footer-links" aria-label="Navigation secondaire">
             <a href="/#pourquoi">Pourquoi Milo</a>
