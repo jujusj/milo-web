@@ -276,7 +276,7 @@ li {
 .hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.02fr) minmax(420px, 0.98fr);
-  align-items: start;
+  align-items: center;
   gap: 56px;
 }
 
