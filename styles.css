@@ -110,20 +110,22 @@ select {
 .brand {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   min-height: 48px;
   text-decoration: none;
 }
 
 .brand img {
-  width: 114px;
+  width: 96px;
   height: auto;
   object-fit: contain;
+  transform: translateY(2px);
 }
 
 .brand span {
   font-size: 0.88rem;
   font-weight: 800;
+  line-height: 1.1;
 }
 
 .nav-toggle {
