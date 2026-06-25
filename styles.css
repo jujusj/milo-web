@@ -569,26 +569,59 @@ li {
   height: 54px;
   margin-bottom: 16px;
   border-radius: 50%;
-  background: transparent;
+  background: var(--color-orange);
+  color: #fff;
   box-shadow: 0 8px 18px rgba(23, 23, 23, 0.08);
 }
 
-.icon-badge img {
+.icon-badge::before {
+  content: "";
   display: block;
-  width: 54px;
-  height: 54px;
+  width: 30px;
+  height: 30px;
+  background: currentColor;
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
 }
 
 .icon-blue {
-  background: transparent;
+  background: var(--color-blue);
 }
 
 .icon-green {
-  background: transparent;
+  background: var(--color-green);
 }
 
 .icon-pink {
-  background: transparent;
+  background: var(--color-pink);
+}
+
+.icon-audio {
+  --icon: url("/assets/icons/icon-audio.svg");
+}
+
+.icon-progress {
+  --icon: url("/assets/icons/icon-progress.svg");
+}
+
+.icon-reward {
+  --icon: url("/assets/icons/icon-reward.svg");
+}
+
+.icon-lesson {
+  --icon: url("/assets/icons/icon-lesson.svg");
+}
+
+.icon-heart {
+  --icon: url("/assets/icons/icon-heart.svg");
+}
+
+.icon-game {
+  --icon: url("/assets/icons/icon-game.svg");
+}
+
+.icon-timer {
+  --icon: url("/assets/icons/icon-timer.svg");
 }
 
 .interface-grid {
